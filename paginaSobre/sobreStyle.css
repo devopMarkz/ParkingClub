@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --cor-sobre: rgb(230, 115, 13);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-repeat: repeat-y;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.conteudo-principal-sobre{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 0 10%;
+    gap: 5%;
+}
+
+.conteudo-principal-sobre__contatos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.conteudo-principal-sobre__card{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1% 2%;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    margin-top: 3%;
+}
+
+.icons-contacts:hover{
+    width: 40px;
+    height: 40px;
+}
+
+.contatos__svg-img{
+    fill: white;
+}
+
+span{
+    color: var(--cor-sobre);
+}
+
+.conteudo-principal-sobre__card > h3{
+    text-align: center;
+    font-size: 22px;
+}
+
+.conteudo-principal-sobre__card > p{
+    font-size: 16px;
+}
+
+.conteudo-principal-sobre__card > ul > li{
+    margin: 2%;
+}
+
+.conteudo-principal-sobre__card > ul > li:hover{
+    transition: 0.5s;
+    font-size: 16.5px;
+    color: var(--cor-sobre);
+}
+
+/* .conteudo-principal-sobre__contatenos1{
+    text-align: center !important;
+}
+
+.conteudo-principal-sobre > p{
+    text-align: center;
+} */
+
+@media (max-width: 1157px) {
+    .servicos{
+        display: none;
+    }
+
+    .conteudo-principal-sobre__card{
+        width: 100%;
+    }
+
+    .conteudo-principal-sobre__contatos{
+        display: none;
+    }
+
+    .conteudo-principal-sobre__contatenos{
+        display: none;
+    }
+}
