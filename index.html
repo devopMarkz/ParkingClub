@@ -56,7 +56,7 @@
                             <div class="inputBox">
                                 <input type="password" name="senha" id="senha" class="inputUser" required>
                                 <label for="senha" class="labelInput">Senha</label>
-                                <i class="show-password-icon" onclick="togglePasswordVisibility('senha', this)"><img src="./componentes/images/cadeado.svg" alt="Cadeado fechado"></i>
+                                <i class="show-password-icon" onclick="visibilidadeDaSenha('senha', this)"><img src="./componentes/images/cadeado.svg" alt="Cadeado fechado"></i>
                             </div>
                             
                 <!--Aqui terminar a parte do nome e email-->
@@ -66,21 +66,20 @@
                 </div>
         </div>
         </main>
-</div>
-
-<script>
-    function togglePasswordVisibility(fieldId, icon) {
-        var field = document.getElementById(fieldId);
-        if (field.type === "password") {
-            // Exibir a senha
-            field.type = "text";
-            icon.innerHTML = '<img src="./componentes/images/desbloquear.svg" alt="Cadeado fechado">';
-        } else {
-            // Ocultar a senha
-            field.type = "password";
-            icon.innerHTML = '<img src="./componentes/images/cadeado.svg" alt="Cadeado aberto">';
+    </div>
+    <script>
+        function visibilidadeDaSenha(fieldId, icon) {
+            var field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                // Exibir a senha
+                field.type = "text";
+                icon.innerHTML = '<img src="./componentes/images/desbloquear.svg" alt="Cadeado fechado">';
+            } else {
+                // Ocultar a senha
+                field.type = "password";
+                icon.innerHTML = '<img src="./componentes/images/cadeado.svg" alt="Cadeado aberto">';
+            }
         }
-    }
-</script>
+    </script>
 </body>
 </html>
