@@ -21,7 +21,7 @@
         <div class="nav-bar__usuario">
             <img src="../componentes/images/user-icon-cliente.png" alt="" srcset="">
             <?php
-            // Capturar o email passado como parâmetro GET
+            // Captura o email passado como parâmetro GET na página de login
             if (isset($_GET['email'])) {
                 $email = $_GET['email'];
                 echo "<p>$email</p>";
@@ -36,7 +36,13 @@
 
     <main class="container-principal-cliente">
             <div class="container-principal-cliente__fundo-cards">
-                <a href="#" class="container-principal-cliente__fundo-cards__card">
+                <?php
+                // Captura o email passado como parâmetro GET na página de login e manda para a página de reservaVaga.php
+                if (isset($_GET['email'])) {
+                    $email = $_GET['email'];
+                    echo "<a href='http://parkingclub.com.br/telaCliente/reservaVaga.php?email=$email' class='container-principal-cliente__fundo-cards__card'>";
+                }
+                ?>
                     <img src="../componentes/images/reservar-vaga_icon.png" alt="" srcset="" style="width: 80px; height: 80px"> 
                     <p> RESERVA DE VAGA </p>
                 </a>
