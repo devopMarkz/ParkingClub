@@ -20,7 +20,7 @@
         </div>
 
         <div class="nav-bar__usuario">
-            <img src="../componentes/images/user-icon-cliente.png" alt="" srcset="">
+            <img src="../componentes/images/user-icon-cliente.png" alt="ícone de usuário do cliente">
             <?php
             // Capturar o email passado como parâmetro GET
             if (isset($_GET['email'])) {
@@ -69,21 +69,18 @@
             <details>
                 <summary>Placa - Por que precisamos?</summary>
                 <p>
-                A placa do veículo é crucial para evitar fraudes e permitir acesso seguro às vagas reservadas, também servindo como comprovante de reserva.              
+                    A placa do veículo é crucial para evitar fraudes e permitir acesso seguro às vagas reservadas, também servindo como comprovante de reserva.              
                 </p>
             </details>
 
             <details>
                 <summary>Data e Hora - Por que precisamos?</summary>
                 <p>
-                A captura da data e hora é crucial para organizar o fluxo de veículos no estacionamento, analisar a ocupação e garantir a segurança, identificando padrões de uso.
+                    A captura da data e hora é crucial para organizar o fluxo de veículos no estacionamento, analisar a ocupação e garantir a segurança, identificando padrões de uso.
                 </p>
             </details>
         </section>
-
-            
         </div>
     </main>
-
 </body>
 </html>
