@@ -36,7 +36,7 @@
 
     <main class="container-principal-cliente">
         <div class="container-principal-cliente__fundo-cards">
-            <form action="reserva_vaga.php" method="post">
+            <form action="reserva_vaga.php" onsubmit="return validarFormulario()" method="post">
                 <fieldset  class="formulario-reserva">
                     <legend><b>Reserve sua Vaga</b></legend>                    
 
@@ -82,5 +82,6 @@
         </section>
         </div>
     </main>
+    <script src="../validaFormulario.js"></script>
 </body>
 </html>
