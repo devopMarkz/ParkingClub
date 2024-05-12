@@ -20,6 +20,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Erro ao conectar ao banco de dados: " . $conn->connect_error);
     }
 
+    // Verificar se o número máximo de vagas foi alcançado na tabela Estacionamento
+    $sql_contagem_vagas = "SELECT COUNT(*) AS total_vagas FROM Estacionamento";
+    $result_contagem_vagas = $conn->query($sql_contagem_vagas);
+    if ($result_contagem_vagas) {
+        $row_contagem_vagas = $result_contagem_vagas->fetch_assoc();
+        $total_vagas = $row_contagem_vagas["total_vagas"];
+        if ($total_vagas >= 200) {
+            // Número máximo de vagas alcançado, impossível reservar
+            echo "<script>alert('O estacionamento está lotado. Não é possível realizar a reserva de vaga neste momento.');</script>";
+            echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+            exit();
+        }
+    } else {
+        // Mensagem de erro na contagem de vagas
+        echo "<script>alert('Erro ao contar vagas no estacionamento.');</script>";
+        echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+        exit();
+    }
+
     // Verificar se a placa já está presente na tabela Estacionamento
     $sql_verificar_placa = "SELECT * FROM Estacionamento INNER JOIN Carros ON Estacionamento.carro_id = Carros.carro_id WHERE Carros.placa = '$placa'";
     $result_verificar_placa = $conn->query($sql_verificar_placa);

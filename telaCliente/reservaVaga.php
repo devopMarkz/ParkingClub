@@ -89,14 +89,14 @@
 
                     // Lógica para determinar a quantidade de vagas disponíveis e exibir a mensagem correspondente
                     if ($vagas_preenchidas == $total_vagas) {
-                        echo "<h2 style='text-align: center; color: red; position: relative; top: 50px;'>Não há vagas disponíveis</h2>";
+                        echo "<h2 style='text-align: center; color: red; position: relative; top: 50px;'>Não há vagas disponíveis<br> ($vagas_restantes) </h2>";
                     } elseif ($vagas_preenchidas >= 0.6 * $total_vagas) {
-                        echo "<h2 style='text-align: center; color: red; position: relative; top: 50px;'>Há poucas vagas disponíveis</h2>";
+                        echo "<h2 style='text-align: center; color: white; position: relative; top: 50px;'>Há poucas vagas disponíveis<br> ($vagas_restantes) </h2>";
                     } else {
                         echo "<h2 style='text-align: center; color: white; position: relative; top: 80px;'>Há muitas vagas disponíveis<br> ($vagas_restantes) </h2>";
                     }
                 } else {
-                    echo "Erro ao contar as linhas na tabela Estacionamento";
+                    echo "<h2 style='text-align: center; color: white; position: relative; top: 80px;'>Não conseguimsos calcular a quantidade de vagas</h2>";
                 }
 
                 // Fechar conexão
