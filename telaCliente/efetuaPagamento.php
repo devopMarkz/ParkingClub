@@ -12,7 +12,7 @@
     <header class="nav-bar">
 
         <nav class="nav-bar__menu">
-            <img src="../componentes/images/menu-icone-cliente.png" alt="Ícone de menu do cliente">
+            <img src="../componentes/images/menu-icone-cliente.svg" alt="Ícone de menu do cliente">
         </nav>
 
         <div class="nav-bar__titulo"> 
