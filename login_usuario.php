@@ -4,8 +4,8 @@
 // Verifica se os campos foram submetidos via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Captura os dados do formulário
-    $cpf = $_POST["cpf"];
-    $senha = $_POST["senha"];
+    $email = $_POST["email"]; // Captura o email do formulário
+    $senha = $_POST["senha"]; // Captura a senha do formulário
 
     // Conectar ao banco de dados 
     $servername = "localhost";
@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Erro ao conectar ao banco de dados: " . $conn->connect_error);
     }
 
-    // Consulta para buscar o usuário pelo CPF
-    $sql = "SELECT * FROM Usuarios WHERE cpf = ?";
+    // Consulta para buscar o usuário pelo email
+    $sql = "SELECT * FROM Usuarios WHERE email = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $cpf);
+    $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -37,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($senha === $usuario['senha']) {
             // Senha correta - fazer login
             echo "<script>alert('Usuário autenticado com sucesso!');</script>";
-            echo('<meta http-equiv="refresh" content="0;url=cadastroUsuario.html">');
+            header("Location: http://parkingclub.com.br/telaCliente/cliente.php?email=$email");
+            // echo('<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/cliente.php">');
             // Aqui você pode redirecionar o usuário para uma página protegida.
         } else {
             // Senha incorreta
