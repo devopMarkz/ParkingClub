@@ -87,7 +87,3 @@
 
 </body>
 </html>
-
-<!-- <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
-        data-preference-id="154120817-8ee8c168-2717-4b9f-962c-834c78db70fa" data-source="button">
-        </script> -->
