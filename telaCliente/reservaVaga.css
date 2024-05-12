@@ -1,0 +1,109 @@
+.formulario-reserva{
+    padding-top: 50px;
+    height: 300px;
+    width: 300px;
+}
+
+.container-principal-cliente__fundo-cards{
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 2% 0 2% 0;
+}
+
+:root{
+    --cor-secundaria: rgb(230, 115, 13);
+    --fonte-principal: poppinsregular;
+}
+
+fieldset{
+    border: 3px solid var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+legend{
+    border: 0px solid violet;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    font-size: 15px;
+    color: white;
+    font-size: 15px; 
+    width: 100%;
+    letter-spacing: 2px;
+    
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput, .inputUser:valid ~ .labelInput{
+    top: -20px;
+    left: 0px;
+    color: var(--cor-secundaria);
+    font-size: 12px;
+}
+
+#submit{
+    background-image: linear-gradient(to right, var(--cor-secundaria), rgb(177, 117, 60));
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;   
+}
+#submit:hover{
+    background-image: linear-gradient(to right, rgb(201, 114, 14), rgb(99, 112, 16));
+}
+
+/* FAQ */
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+section > h2{
+    text-align: center;
+}
+  
+  section details summary{
+    background-color: #e6730d;
+    padding: 2%;
+    border-bottom: 2px solid #282828;
+    color: white;
+    font-weight: 600;
+    width: 400px;
+  }
+  
+  section details p{
+    background-color: #282828;
+    color: white;
+    padding: 2%;
+    margin: 0;
+    font-size: 0.9rem;
+    width: 400px;
+  }
