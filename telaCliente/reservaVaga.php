@@ -89,9 +89,9 @@
 
                     // Lógica para determinar a quantidade de vagas disponíveis e exibir a mensagem correspondente
                     if ($vagas_preenchidas == $total_vagas) {
-                        echo "<h2 style='text-align: center; color: red; position: relative; top: 50px;'>Não há vagas disponíveis<br> ($vagas_restantes) </h2>";
+                        echo "<h2 style='text-align: center; color: red; position: relative; top: 80px;'>Não há vagas disponíveis<br> ($vagas_restantes) </h2>";
                     } elseif ($vagas_preenchidas >= 0.6 * $total_vagas) {
-                        echo "<h2 style='text-align: center; color: white; position: relative; top: 50px;'>Há poucas vagas disponíveis<br> ($vagas_restantes) </h2>";
+                        echo "<h2 style='text-align: center; color: #B8621B; position: relative; top: 80px;'>Há poucas vagas disponíveis<br> ($vagas_restantes) </h2>";
                     } else {
                         echo "<h2 style='text-align: center; color: white; position: relative; top: 80px;'>Há muitas vagas disponíveis<br> ($vagas_restantes) </h2>";
                     }
@@ -104,7 +104,7 @@
             ?>
 
             <div class="container-principal-cliente__fundo-cards">
-                <form action="reserva_vaga.php" onsubmit="return validarFormulario()" method="post">
+                <form action="reserva_vaga.php" onsubmit="return validarFormularioReservaVaga()" method="post">
                     <fieldset  class="formulario-reserva">
                         <legend><b>Reserve sua Vaga</b></legend>                    
 
@@ -151,6 +151,6 @@
             </div>
         </div>
     </main>
-    <script src="../validaFormulario.js"></script>
+    <script src="./validarFormularioReservaVaga.js"></script>
 </body>
 </html>
