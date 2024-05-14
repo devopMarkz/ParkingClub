@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Executa a query de inserção
         if ($stmt->execute()) {
             // Redireciona para a página de sucesso após cadastro
-            $redirect = "<script>window.location.href = 'index.html';</script>";
+            $redirect = "<script>alert('Usuário Cadastrado com Sucesso!'); window.location.href = 'index.html';</script>";
         } else {
             // Mensagem de erro em caso de falha ao cadastrar usuário
             $redirect = "<script>alert('Erro ao cadastrar usuário. Por favor, tente novamente mais tarde.'); window.location.href = 'http://parkingclub.com.br/cadastroUsuario.html';</script>";
