@@ -59,23 +59,18 @@
         <div class="container-principal-cliente__fundo-cards suporte-videos">
             <div class="card-iframe">
                 <p> Como utilizar nosso sistema </p>
-                <iframe width="460" height="315" src="../componentes/images/RETENÇÕES FEDERAIS.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="460" height="315" src="https://www.youtube.com/embed/xLpG6Yfr-Mo?si=uXToPMUAj6BUP4y9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
             </div>
-
             <div class="card-iframe">
                 <p> Como reservar sua vaga </p>
-                <iframe width="460" height="315" src="../componentes/images/RETENÇÕES FEDERAIS.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
+                <iframe width="460" height="315" src="https://www.youtube.com/embed/jcnmN1YAJiY?si=UyAdt3u1uoxI6Nx7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
             <div class="card-iframe">
                 <p> Onde pagar sua saída </p>
-                <iframe width="460" height="315" src="../componentes/images/RETENÇÕES FEDERAIS.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                <iframe width="460" height="315" src="https://www.youtube.com/embed/FnzpP2Iwnxc?si=WOswoVmiEjkWpJts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
 
             <div class="card-iframe">
                 <p> Como efetuar seu pagamento </p>
-                <iframe width="460" height="315" src="../componentes/images/RETENÇÕES FEDERAIS.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                <iframe width="343" height="610" src="https://www.youtube.com/embed/c_mUqEhSJCA" title="Saiba como pagar o Estacionamento Digital com Pix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>               </div>
         </div>
     </main>
 
