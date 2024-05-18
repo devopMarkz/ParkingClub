@@ -76,7 +76,13 @@
                     <img src="../componentes/images/pagamento_icon.png" alt="" srcset="" style="width: 80px; height: 80px">
                     <p> PAGAR SAÍDA </p>
                 </a>
-                <a href="#" class="container-principal-cliente__fundo-cards__card">
+                <?php
+                // Captura o email passado como parâmetro GET na página de login e manda para a página de reservaVaga.php
+                if (isset($_GET['email'])) {
+                    $email = $_GET['email'];
+                    echo "<a href='http://parkingclub.com.br/telaCliente/suporte.php?email=$email' class='container-principal-cliente__fundo-cards__card'>";
+                }
+                ?>
                     <img src="../componentes/images/suporte_icon.png" alt="" srcset="" style="width: 80px; height: 80px">
                     <p> SUPORTE </p>
                 </a>
