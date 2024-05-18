@@ -70,7 +70,7 @@
 
             <div class="card-iframe">
                 <p> Como efetuar seu pagamento </p>
-                <iframe width="343" height="610" src="https://www.youtube.com/embed/c_mUqEhSJCA" title="Saiba como pagar o Estacionamento Digital com Pix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>               </div>
+                <iframe width="460" height="315" src="https://www.youtube.com/embed/c_mUqEhSJCA" title="Saiba como pagar o Estacionamento Digital com Pix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>               </div>
         </div>
     </main>
 

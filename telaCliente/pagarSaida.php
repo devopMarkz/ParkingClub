@@ -58,7 +58,7 @@
 
 
     <main class="container-principal-cliente">
-            <div class="container-principal-cliente__fundo-cards">
+        <div class="container-principal-cliente__fundo-cards">
 
             <form action="pagamento_saida.php" onsubmit="return validarFormularioReservaVaga()" method="post">
                     <fieldset  class="formulario-reserva">
@@ -88,9 +88,14 @@
                 echo "<h2 style='text-align: center;'>R$00.00</h2>";
             }
             ?>
+            <br>
+            <h2 style="text-align: center;">
+            <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+data-preference-id="154120817-ab69fd1b-6ac7-4469-925c-c8f1c96a9c78" data-source="button">
+</script>
+            </h2>
             </div>
-
-            </div>
+        </div>
     </main>
     <script src="./validarFormularioReservaVaga"></script>
 </body>
