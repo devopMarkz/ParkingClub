@@ -22,15 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Consulta para buscar o usuário pelo email
-    $sql = "SELECT * FROM Usuarios WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $sql = "SELECT * FROM Usuarios WHERE email = ?"; // A consulta SQL é definida
+    $stmt = $conn->prepare($sql); // Preparação da consulta
+    $stmt->bind_param("s", $email); // liga o parâmetro $email ao placeholder ? na consulta SQL ^
+    $stmt->execute(); // A declaração SQL preparada é executada no banco de dados.
+    $result = $stmt->get_result(); // Armazena as linhas obtidas da consulta
 
     // Verifica se o usuário foi encontrado
     if ($result->num_rows > 0) {
-        $usuario = $result->fetch_assoc();
+        $usuario = $result->fetch_assoc(); // Se o usuário foi encontrado, extraímos os dados dele usando fetch_assoc(), que retorna uma array associativa com os dados do usuário.
 
         // Verifica a senha
         // LEMBRAR DE IMPLEMENTAR: SE TIPO DE USER FOR CLIENTE COMUM, VAI PRA UMA PÁGINA, SE FOR CLIENTE FUNCIONÁRIO, VAI PRA OUTRA PÁGINA
