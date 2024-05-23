@@ -1,4 +1,7 @@
 <?php
+session_start();
+$email = $_SESSION['email'];
+
 // Dados de conexão com o banco de dados
 $servername = "localhost";
 $username = "root";
@@ -29,13 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($total_vagas >= 200) {
             // Número máximo de vagas alcançado, impossível reservar
             echo "<script>alert('O estacionamento está lotado. Não é possível realizar a reserva de vaga neste momento.');</script>";
-            echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+            echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php">';
             exit();
         }
     } else {
         // Mensagem de erro na contagem de vagas
         echo "<script>alert('Erro ao contar vagas no estacionamento.');</script>";
-        echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+        echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php">';
         exit();
     }
 
@@ -45,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result_verificar_placa->num_rows > 0) {
         // Placa já existe na tabela Estacionamento
         echo "<script>alert('A placa informada já está em uso.');</script>";
-        echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+        echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php">';
         exit();
     } else {
         // Placa não existe na tabela Estacionamento, pode proceder com a reserva
@@ -56,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $usuario_id = $row["usuario_id"];
-            $email = $row["email"];
+            // $email = $row["email"];
 
             // Inserir dados na tabela Carros
             $sql_carro = "INSERT INTO Carros (placa) VALUES ('$placa')";
@@ -69,24 +72,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($conn->query($sql_estacionamento) === TRUE) {
                     // Mensagem de sucesso
                     echo "<script>alert('Reserva de vaga efetuada com sucesso!');</script>";
-                    echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/efetuaPagamento.php?email='.$email.'">';
+                    echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/efetuaPagamento.php">';
                     exit();
                 } else {
                     // Mensagem de falha
                     echo "<script>alert('Erro ao inserir dados na tabela Estacionamento.');</script>";
-                    echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+                    echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php">';
                     exit();
                 }
             } else {
                 // Mensagem de falha
                 echo "<script>alert('Erro ao inserir dados na tabela Carros.');</script>";
-                echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+                echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php">';
                 exit();
             }
         } else {
             // Mensagem de falha
             echo "<script>alert('Usuário não encontrado para o CPF informado.');</script>";
-            echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php?email='.$email.'">';
+            echo '<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/reservaVaga.php">';
         }
     }
 
